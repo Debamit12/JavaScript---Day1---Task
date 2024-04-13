@@ -1,0 +1,35 @@
+Difference between HTTP1.1 vs HTTP2:
+
+The full form of HTTP is Hyper Text Transfer Protocol. It is used in client-server communication.
+In order to understand HTTP/HTTPS(secured) we need to first understand the definition of a protocol(Network Protocol).
+Network Proctocols is a set of rules how a data should be transmitted from one server to another(one machine to another machine).
+
+There are different types of Network Proctocols; used according to the type of data transfer:
+1) HTTP/HTTPS - Hyper Text Transfer Proctocol
+2) TCP - Transmission Control Protocol
+3) UDP - User Datagram Protocol 
+and many more.
+
+HTTP/HTTPS - It is undirectional. By using HTTP user sends the request to the server & the server sends the response to the user.
+             If we want to get another data we will have to request it again.
+
+HTTP/1.1 : (Created in 1997)                                                            
+
+1) Relies on a single TCP connection per request. This means if one file is slow to load (like an image),
+   it can hold up the loading of other files on the same page.
+
+2) Uses text-based messages, which are larger and require more processing power to interpret.
+3) Limited header compression capabilities. Repeated headers in every request can waste bandwidth.
+4) The server waits for the browser to request resources.
+
+HTTP/2 : (Created in 2015)
+
+1) Enables multiplexing, allowing multiple requests to be sent over a single TCP connection.
+This means faster loading times, especially for webpages with many resources like images, videos, and stylesheets.
+
+2) Uses a binary protocol, which is more compact and efficient to transmit, reducing overhead and improving performance.
+3) Employs HPACK (Header Packing) for efficient header compression. This significantly reduces the size of header data and improves loading speed.
+4) Allows the server to anticipate client requests and proactively push resources (like scripts or stylesheets) that the browser might need,
+   further optimizing loading times.
+
+HTTP/2 is a faster, more efficient, and more secure evolution of HTTP/1.1. Upgrading to HTTP/2 can significantly improve website loading times and user experience.

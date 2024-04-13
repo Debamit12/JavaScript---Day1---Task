@@ -1,0 +1,35 @@
+Objects and its internal representation in Javascript:
+
+Objects, fundamental data structures in JavaScript, store collections of key-value pairs, allowing organization of
+related information under a single entity. Unlike primitive data types (such as numbers, strings, booleans)
+holding single values, objects store complex data and may reference other objects.
+
+Keys in a key-value pair are called properties.
+Properties can hold various data types, including strings, numbers, booleans, arrays, or even other objects.
+Objects can also have methods, which are functions associated with the object.
+These functions can operate on the object's data (properties) or perform specific .
+
+While JavaScript's internal implementation details are subject to change across different browsers and JavaScript engines,
+objects are generally believed to be represented using hash tables.
+Hash tables are data structures that store key-value pairs with a fast lookup mechanism. When you define a property in an object,
+the JavaScript engine calculates a unique hash code for the property key.
+This hash code is then used to efficiently store and retrieve the corresponding value within the hash table.
+
+For example:
+
+const person = {
+  firstName: "Alice",
+  lastName: "Smith",
+  age: 30,
+  greet: function() {
+    console.log("Hello, my name is " + this.firstName + " " + this.lastName);
+  }
+};
+
+The person object has properties like firstName, lastName, and age. The greet property is a method (function) associated with the object.
+Internally, the JavaScript engine likely uses a hash table to store these key-value pairs.
+The hash code for each property key (e.g., "firstName") allows for quick retrieval of the corresponding value (e.g., "Alice").
+
+Objects are dynamic in JavaScript. You can add or remove properties even after creating the object.
+The order in which properties are defined doesn't necessarily reflect the order they are stored internally.
+JavaScript doesn't have a built-in mechanism to directly access the underlying hash table or the internal representation of objects.
